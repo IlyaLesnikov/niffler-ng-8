@@ -10,11 +10,19 @@ public interface Config {
 
   String authUrl();
 
+  String authJdbcUrl();
+
   String gatewayUrl();
 
   String userdataUrl();
 
+  String userdataJdbcUrl();
+
   String spendUrl();
 
-  String ghUrl();
+  String spendJdbcUrl();
+
+  default String ghUrl() {
+    return "https://github.com/";
+  }
 }
